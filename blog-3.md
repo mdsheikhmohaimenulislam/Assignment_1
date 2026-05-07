@@ -1,5 +1,5 @@
 
-## What are generics and do generics produce type-safe code?
+## Generics কীভাবে Reusable এবং Type-Safe Code তৈরি করে?
 
 
 ## Generics ছাড়া সমস্যা
