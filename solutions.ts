@@ -1,18 +1,13 @@
-// Problem 1:
 function filterEvenNumbers(inputs: number[]): number[] {
   return inputs.filter((input) => input % 2 === 0);
 }
-
 filterEvenNumbers([1, 2, 3, 4, 5, 6]);
 
-// Problem 2:
 function reverseString(input: string): string {
   return input.split("").reverse().join("");
 }
-
 reverseString("typescript");
 
-// Problem 3:
 type StringOrNumber = number | string;
 
 function checkType(input: StringOrNumber) {
@@ -24,14 +19,12 @@ function checkType(input: StringOrNumber) {
 }
 checkType("Hello");
 
-// Problem 4:
 function getProperty<T extends object>(obj: T, key: keyof T) {
   return obj[key];
 }
 const user = { id: 1, name: "John Doe", age: 21 };
 getProperty(user, "name");
 
-// Problem 5:
 interface Book {
   title: string;
   author: string;
@@ -52,7 +45,6 @@ const myBook = {
 };
 toggleReadStatus(myBook);
 
-// Problem 6:
 class Person {
   name: string;
   age: number;
@@ -74,23 +66,20 @@ class Student extends Person {
     return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
   }
 }
-
 const student = new Student("Alice", 20, "A");
 student.getDetails();
 
-// Problem 7:
 function getIntersection(num1: number[], num2: number[]) {
   const result: number[] = [];
 
   for (let i = 0; i < num1.length; i++) {
-    const value = num1[i];
+    const singleNum1 = num1[i];
 
-    if (num2.includes(value) && !result.includes(value)) {
-      result.push(value);
+    if (num2.includes(singleNum1) && !result.includes(singleNum1)) {
+      result.push(singleNum1);
     }
   }
 
   return result;
 }
-
 getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]);
